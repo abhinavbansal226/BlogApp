@@ -1,44 +1,76 @@
-# 💬 Real-Time Chat Application (MERN + Socket.IO)
+# 🧠 AI-Powered Blog Application (MST Stack + Google Gemini)
 
-A full-stack real-time chat application built using the **MERN stack** (MongoDB, Express, React, Node.js) and **Socket.IO** for instant messaging and user presence. This project includes modern features like user authentication, image uploads, profile management, and online/offline indicators—all styled with Tailwind CSS and deployed on Vercel.
+This full-stack AI-enabled blog application is built using the **MST stack** — MongoDB, Express, React, and Node.js — with **Google Gemini AI** integration for auto-generating blog content. The project includes media optimization using **ImageKit**, a secure admin dashboard, and real-time blog/comment management. The entire app is deployed on **Vercel** with proper environment configuration for a production-ready experience.
 
 ---
 
 ## 🚀 Features
 
-- 🗃️ **MERN Stack:** MongoDB, Express.js, React.js, Node.js
-- ⚡ **Real-Time Messaging:** Instant chat updates and user status via Socket.IO
-- 🔐 **Authentication:** Secure login/signup using JWT and bcrypt
-- 📸 **Image Uploads:** Cloudinary integration for chat and profile images
-- 🔍 **User Search:** Search bar for finding users in real-time
-- 🎨 **Responsive UI:** Tailwind CSS with React Router for smooth navigation
-- 🌐 **Deployed on Vercel:** Frontend & backend deployed with environment configurations
+- 🤖 AI-generated blog content using Google Gemini
+- 🗃️ Full CRUD blog & comment management with secure admin login
+- 🖼️ Real-time media upload and optimization with ImageKit
+- 🔐 JWT-based authentication and protected routes
+- ✍️ Rich text editor (React-Quill) with Markdown parsing
+- 🌐 Frontend and backend deployed on Vercel
+- 📊 Dynamic dashboard with blog & comment analytics
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Frontend            | Backend             | Real-Time | Styling        | Storage        | Deployment |
-|---------------------|---------------------|-----------|----------------|----------------|------------|
-| React + Vite        | Node.js + Express   | Socket.IO | Tailwind CSS   | MongoDB + Cloudinary | Vercel     |
+| Frontend        | Backend           | AI Integration  | Media Handling  | Deployment |
+|----------------|-------------------|-----------------|------------------|------------|
+| React + Vite   | Node.js + Express | Google Gemini API | ImageKit + Multer | Vercel     |
 
 ---
 
 ## 📦 Project Structure
 
-### Frontend
-- **React** app bootstrapped with **Vite**
-- **React Router DOM** for routing
-- **Tailwind CSS** for styling
-- **Context API** for Auth and Chat state
-- **Image Uploads** to Cloudinary (base64 encoding)
-- Routes: Login, Homepage, Profile
+### 🖥️ Frontend
+- Built with **Vite + React**
+- **React Router** for page routing
+- **React-Quill** for blog editing
+- **Tailwind CSS** for responsive styling
+- **Context API** for auth & global state
 
-### Backend
-- **Express Server**
-- **Mongoose** for MongoDB models
-- **JWT** for authentication
-- **Socket.IO** for real-time events
-- **Cloudinary** for image storage
-- **CORS**, **dotenv**, and more for environment config and cross-origin support
+### 🌐 Backend
+- **Node.js + Express** with modular routes/controllers
+- **Mongoose** for MongoDB integration
+- **JWT** for admin authentication
+- **Multer** for image uploads
+- **Google Gemini API** for AI-based content generation
+
+---
+
+## 🧠 AI-Powered Content Creation
+
+- Uses **Google Gemini API** to automatically generate full blog descriptions from titles.
+- AI generation is triggered during blog creation in the admin dashboard.
+- Loading state and toast notifications handle asynchronous API feedback.
+
+---
+
+## 📂 Image Upload & Optimization
+
+- **Multer** handles file parsing on backend.
+- Images are uploaded to **ImageKit**, where they are compressed, resized, and served in optimized formats (e.g., WebP).
+- URLs are saved in MongoDB for retrieval.
+
+---
+
+## 🛡️ Authentication & Authorization
+
+- JWT tokens issued on admin login
+- Protected routes for blog/comment CRUD operations
+- Tokens stored and managed via localStorage and React Context
+
+---
+
+## 📑 Admin Dashboard
+
+- View, publish/unpublish, delete blogs
+- Approve/delete user comments
+- Add blogs with AI-powered content generation
+- Dashboard metrics: total blogs, drafts, comments, etc.
+
 
